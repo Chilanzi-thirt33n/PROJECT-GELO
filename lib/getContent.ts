@@ -7,6 +7,8 @@ export interface ContentItem {
   date?: string;
   content: string; // raw markdown content
   slug: string;
+  author?: string;
+  tags?: string[];
   images?: string[];
   [key: string]: unknown;
 }
@@ -45,6 +47,8 @@ const getContent = (type: string): ContentItem[] => {
       content,
       slug: filename.replace(/\.md$/, ""),
       images,
+      tags: Array.isArray(data.tags) ? data.tags : undefined,
+      author: typeof data.author === "string" ? data.author : undefined,
       ...data,
     };
   });

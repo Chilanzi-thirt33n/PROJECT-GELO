@@ -10,6 +10,8 @@ export interface SingleContent {
   contentHtml: string; // HTML string rendered from markdown
   slug: string;
   images?: string[];
+  tags?: string[];
+  author?: string;
   [key: string]: unknown;
 }
 
@@ -49,6 +51,8 @@ export async function getSingleContent(
     contentHtml,
     slug,
     images,
+    tags: Array.isArray(data.tags) ? data.tags : undefined,
+    author: typeof data.author === "string" ? data.author : undefined,
     ...data,
   };
 }

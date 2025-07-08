@@ -122,32 +122,54 @@
 }
 
 .markdown-body {
-    @apply leading-relaxed text-pink-800;
+    @apply leading-relaxed text-pink-800 text-base sm:text-lg;
 }
+
 .markdown-body p {
-    @apply mb-4 text-base leading-relaxed text-pink-800;
+    @apply mb-5 leading-loose text-pink-800;
 }
 
 .markdown-body h1 {
-    @apply text-4xl font-bold mb-6 text-pink-950;
+    @apply text-4xl sm:text-5xl font-extrabold mb-6 text-pink-950;
 }
 
 .markdown-body h2 {
-    @apply text-3xl font-semibold mt-8 mb-4 text-pink-900;
+    @apply text-3xl font-bold mt-10 mb-4 text-pink-900 border-b border-pink-200 pb-2;
 }
 
 .markdown-body h3 {
-    @apply text-xl font-semibold text-pink-900;
+    @apply text-2xl font-semibold mt-8 mb-3 text-pink-900;
 }
 
 .markdown-body ul {
-    @apply list-disc list-inside mb-6  text-pink-800;
+    @apply list-disc list-inside space-y-2 mb-6 text-pink-800;
+}
+
+.markdown-body ol {
+    @apply list-decimal list-inside space-y-2 mb-6 text-pink-800;
+}
+
+.markdown-body li::marker {
+    color: #ec4899; /* Pink-500 */
 }
 
 .markdown-body img {
-    @apply w-full h-[40dvh] my-6 rounded shadow object-cover object-center mx-auto;
+    @apply w-full h-[40dvh] my-6 rounded-xl shadow-md object-cover object-center mx-auto;
 }
 
 .markdown-body blockquote {
-    @apply border-l-4 border-pink-400 pl-4 italic text-pink-950 my-6;
+    @apply border-l-4 border-pink-400 pl-4 italic text-pink-950 bg-pink-50 py-3 px-2 rounded;
+}
+
+.markdown-body hr {
+    @apply my-10 border-pink-200;
+}
+
+/* Optional: Styling tips or custom alerts */
+.markdown-body .tip {
+    @apply bg-yellow-100 text-yellow-900 border-l-4 border-yellow-400 px-4 py-3 rounded mb-6 text-sm;
+}
+
+.markdown-body code {
+    @apply bg-pink-100 px-1 py-0.5 rounded text-pink-700 text-sm font-mono;
 }

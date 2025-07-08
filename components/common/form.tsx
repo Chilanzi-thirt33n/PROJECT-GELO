@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import { Input } from "@/components/ui/input";
@@ -42,17 +42,15 @@ const MyForm = () => {
 
   // Status message state
   const [status, setStatus] = useState<string | null>(null);
-  const { toast } = useToast();
 
   // Show toast whenever status updates
   useEffect(() => {
     if (status) {
-      toast({
-        title: "Notification",
+      toast("Notification", {
         description: status || "Something went wrong.",
       });
     }
-  }, [status, toast]);
+  }, [status]);
 
   // Handles changes to form inputs, including select fields
   const handleChange = (

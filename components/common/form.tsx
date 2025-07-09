@@ -1,20 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import { toast } from "sonner";
 import { Card, CardContent } from "@/components/ui/card";
-import { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-
-// Define types for the form data and API response
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+import { Button } from "@/components/ui/button";
 import {
   Select,
   SelectContent,
@@ -22,6 +14,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 interface ApiResponse {
   error?: string;
@@ -32,7 +31,6 @@ const WebsiteID = process.env.NEXT_PUBLIC_WEBSITE_ALLOWED || "";
 const WebsiteAPI = process.env.NEXT_PUBLIC_WEBSITE_ALLOWED_API || "";
 
 const MyForm = () => {
-  // State to manage form input values
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -40,45 +38,38 @@ const MyForm = () => {
     message: "",
   });
 
-  // Status message state
   const [status, setStatus] = useState<string | null>(null);
 
-  // Show toast whenever status updates
   useEffect(() => {
     if (status) {
       toast("Notification", {
-        description: status || "Something went wrong.",
+        description: status,
       });
     }
   }, [status]);
 
-  // Handles changes to form inputs, including select fields
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | string,
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    const value = typeof e === "string" ? e : e.target.value;
-
-    setFormData((prevData) => ({
-      ...prevData,
-      [typeof e === "string" ? "subject" : e.target.name]: value,
-    }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Handles form submission
+  const handleSelectChange = (value: string) => {
+    setFormData((prev) => ({ ...prev, subject: value }));
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent default form submission
-    setStatus("Sending..."); // Indicate the sending process
+    e.preventDefault();
+    setStatus("Sending...");
 
     try {
-      // Send form data to the API
-      const response = await fetch(MyForm_Api, {
+      const res = await fetch(MyForm_Api, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          websiteID: WebsiteID, // Identifier for the website
-          apiKey: WebsiteAPI, // API key for authentication
+          websiteID: WebsiteID,
+          apiKey: WebsiteAPI,
           senderName: formData.name,
           senderEmail: formData.email,
           subject: formData.subject,
@@ -86,35 +77,27 @@ const MyForm = () => {
         }),
       });
 
-      const responseData: ApiResponse = await response.json(); // Parse response
+      const result: ApiResponse = await res.json();
 
-      if (response.ok) {
+      if (res.ok) {
         setStatus("Message sent successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        setStatus(
-          responseData.error || "Failed to send the message. Please try again.",
-        );
+        setStatus(result.error || "Failed to send message.");
       }
-    } catch (error: unknown) {
-      console.error("Error occurred:", error);
+    } catch (error) {
       setStatus(`An error occurred: ${(error as Error).message}`);
     }
   };
 
   return (
-    <Card className="bg-transparent shadow-none border-0 ">
+    <Card className="bg-transparent shadow-none border-0">
       <CardContent>
         <form
           onSubmit={handleSubmit}
           className="w-full flex flex-col gap-4 p-4"
         >
-          <div className="w-full grid grid-cols-1 gap-6 justify-evenly items-start">
+          <div className="w-full grid grid-cols-1 gap-6">
             <span className="w-full">
               <Label htmlFor="name">Full Name</Label>
               <Input
@@ -123,9 +106,8 @@ const MyForm = () => {
                 name="name"
                 placeholder="William Simpson"
                 value={formData.name}
-                onChange={handleChange}
+                onChange={handleInputChange}
                 required
-                className="w-full p-2 border border-gray-300 rounded-lg"
               />
             </span>
 
@@ -137,38 +119,41 @@ const MyForm = () => {
                 name="email"
                 placeholder="williamsimpson@gmail.com"
                 value={formData.email}
-                onChange={handleChange}
+                onChange={handleInputChange}
                 required
-                className="w-full p-2 border border-gray-300 rounded-lg"
               />
             </span>
 
             <span className="w-full">
-              <Label>Select your subject</Label>
+              <Label htmlFor="subject">Select Your Subject</Label>
               <Select
-                name="inquiryType"
                 value={formData.subject}
-                onValueChange={handleChange}
+                onValueChange={handleSelectChange}
                 required
               >
-                <SelectTrigger>
+                <SelectTrigger id="subject">
                   <SelectValue placeholder="Subject" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="demo-booking">Book a Demo</SelectItem>
-                  <SelectItem value="pricing-inquiry">
-                    Pricing Inquiry
+                  <SelectItem value="place-order">Place an Order</SelectItem>
+                  <SelectItem value="product-inquiry">
+                    Product Inquiry
                   </SelectItem>
-                  <SelectItem value="feature-request">
-                    Feature Request
+                  <SelectItem value="custom-cake-request">
+                    Custom Cake or Pastry Request
                   </SelectItem>
-                  <SelectItem value="technical-support">
-                    Technical Support
+                  <SelectItem value="bulk-order">
+                    Bulk or Wholesale Orders
                   </SelectItem>
-                  <SelectItem value="partnership">
-                    Partnership or Collaboration
+                  <SelectItem value="pricing">
+                    Pricing & Availability
                   </SelectItem>
-                  <SelectItem value="billing">Billing & Payments</SelectItem>
+                  <SelectItem value="delivery">
+                    Delivery or Pickup Info
+                  </SelectItem>
+                  <SelectItem value="collaboration">
+                    Collaboration or Reseller
+                  </SelectItem>
                   <SelectItem value="general">General Inquiry</SelectItem>
                 </SelectContent>
               </Select>
@@ -177,13 +162,12 @@ const MyForm = () => {
             <span className="w-full">
               <Label htmlFor="message">Message</Label>
               <Textarea
-                placeholder="Type your message here."
                 id="message"
                 name="message"
+                placeholder="Type your message here."
                 value={formData.message}
-                onChange={handleChange}
+                onChange={handleInputChange}
                 required
-                className="w-full p-2 border border-gray-300 rounded-lg"
               />
               <p className="text-sm text-muted-foreground mt-2">
                 Your message will be copied to the support team.
@@ -193,7 +177,7 @@ const MyForm = () => {
 
           <Button
             type="submit"
-            className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg"
+            className="mt-4 w-full bg-pink-500 hover:bg-pink-600 text-white py-2 rounded-lg"
           >
             Send Message
           </Button>

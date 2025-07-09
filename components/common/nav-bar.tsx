@@ -97,9 +97,9 @@ const NavLinks: React.FC<NavLinksProps> = ({ links, logoSrc }) => {
               onClick={toggleMenu}
             >
               {isOpen ? (
-                <FiX className="w-6 h-6 text-pink-50 hover:text-pink-500" />
+                <FiX className="w-6 h-6 text-pink-200 hover:text-pink-500" />
               ) : (
-                <FiMenu className="w-6 h-6 text-pink-50 hover:text-pink-500" />
+                <FiMenu className="w-6 h-6 text-pink-200 hover:text-pink-500" />
               )}
             </button>
           )}

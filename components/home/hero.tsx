@@ -37,7 +37,7 @@ export const HeroSection = () => {
       />
 
       {/* ✅ Overlay */}
-      <div className="absolute inset-0 bg-black/10 z-10" />
+      <div className="absolute inset-0 bg-black/30 z-10" />
 
       {/* ✅ Your original content unchanged */}
       <motion.header
@@ -88,7 +88,7 @@ export const HeroSection = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.6 }}
-            className="text-base sm:text-lg md:text-xl text-pink-100 max-w-2xl"
+            className="text-base sm:text-lg md:text-xl text-pink-50 font-bold max-w-2xl"
           >
             Shop at Gelo’s Treats for top-quality baking tools, ingredients, and
             fresh delights. Whether you are in Lusaka or anywhere in Zambia — we

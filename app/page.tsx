@@ -9,15 +9,18 @@ export default function Home() {
     <div className=" font-[family-name:var(--font-geist-sans)] w-full overflow-hidden">
       <HeroSection />
       <main className="w-full flex flex-col justify-center items-center">
+        <section className="w-full lg:w-[85vw]">
+          <ProductCategories />
+        </section>
+
         <section className="w-full justify-center items-stretch">
           <WhyChooseUs />
         </section>
 
-        <section className="w-full lg:w-[70vw]">
-          <ProductCategories />
-        </section>
-
-        <section id="About" className="w-full justify-center items-stretch">
+        <section
+          id="About"
+          className="w-full justify-center items-stretch my-5"
+        >
           <About />
         </section>
 

@@ -51,7 +51,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 px-6">
+    <section className="p-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-pink-800 mb-10">
           Why Choose Us

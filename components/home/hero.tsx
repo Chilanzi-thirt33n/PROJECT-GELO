@@ -63,7 +63,7 @@ export const HeroSection = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.6 }}
-            className="text-sm uppercase tracking-widest text-pink-600 font-semibold"
+            className="text-sm uppercase tracking-widest text-pink-50 font-semibold"
           >
             Suppliers of Premium Baking Ingredients & Appliances in Lusaka
           </motion.p>
@@ -75,10 +75,10 @@ export const HeroSection = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.6 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-pink-50 leading-tight"
+            className="text-3xl sm:text-4xl font-bold text-pink-300 leading-tight"
           >
             Bake Better. Bake Smarter. <br className="hidden sm:inline" />
-            Welcome to <span className="text-pink-600">Gelo’s Treats</span>
+            Welcome to <span className="text-pink-50">Gelo’s Treats</span>
           </motion.h1>
 
           {/* Subheading */}

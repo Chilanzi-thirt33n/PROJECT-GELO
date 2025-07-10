@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
   return (
     <div className="w-screen bg-pink-950 text-pink-50 flex flex-col justify-center items-center overflow-hidden">
       <motion.div className="w-full flex flex-col justify-center items-center gap-6 p-6">
-        <section className="w-full grid grid-cols-1 lg:grid-cols-3 auto-rows-min gap-4 justify-between items-start">
+        <section className="w-full grid grid-cols-1 lg:grid-cols-3 auto-rows-min gap-6 justify-between items-start">
           {/* Logo */}
           <div className="lg:self-center min-w-[250px] flex justify-center items-center gap-4">
             <Image src="/logo.svg" alt="Loanlog" width={40} height={40} />
@@ -48,9 +48,7 @@ const Footer: React.FC = () => {
 
           {/* Links Section */}
           <div className="flex flex-col items-center lg:items-start">
-            <h3 className="text-sm lg:text-lg font-bold text-pink-300">
-              Links
-            </h3>
+            <h3 className=" text-lg font-bold text-pink-300">Links</h3>
             <ul className="flex flex-col lg:flex-row gap-4 text-sm text-pink-50 text-center lg:text-start">
               {links.map((link) => (
                 <li key={link.name}>

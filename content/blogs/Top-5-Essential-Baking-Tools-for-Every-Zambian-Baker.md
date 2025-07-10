@@ -1,5 +1,6 @@
 ---
 title: "Top 5 Essential Baking Tools for Every Zambian Baker"
+intro: "Discover the top 5 essential baking tools every Zambian baker should own."
 date: "2025-07-08"
 author: "Chilanzi Sensenta"
 images:

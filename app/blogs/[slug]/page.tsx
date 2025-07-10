@@ -29,11 +29,15 @@ export default async function BlogPage({
             <h1 className="text-xl lg:text-6xl font-bold text-pink-900 leading-tight mb-2">
               {blog.title}
             </h1>
-            <p className="text-sm text-pink-600 mb-1">
+            {/* Safe check for unknown intro */}
+            {typeof blog.intro === "string" && (
+              <p className="text-pink-600 mb-4">{blog.intro}</p>
+            )}
+            <p className="text-sm text-pink-300 mb-1">
               Written by: {blog.author}
             </p>
             {blog.date && (
-              <p className="text-sm text-pink-600">
+              <p className="text-sm text-pink-300">
                 Published Date:{" "}
                 {new Date(blog.date).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -49,7 +53,7 @@ export default async function BlogPage({
             <div className="hidden sm:block transform rotate-[-2deg] transition-all duration-300 hover:rotate-0 hover:scale-105">
               <div className="bg-white rounded-sm shadow-2xl w-full max-w-lg pb-10 pt-4 px-4 relative">
                 {/* Simulate wider aspect and thick bottom like Polaroid */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm">
+                <div className="relative aspect-[4/3] w-full overflow-hidden ">
                   <Image
                     src={blog.images[0]}
                     alt={blog.title}

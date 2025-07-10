@@ -53,7 +53,7 @@ export default function ContactPage() {
         className="text-center w-full bg-white bg-[url('/bg.svg')] bg-cover bg-center"
         variants={itemVariants}
       >
-        <section className="flex flex-col text-white justify-center items-center h-[30dvh] lg:h-[25dvh]">
+        <section className="flex mt-20 flex-col text-white justify-center items-center h-[30dvh] lg:h-[25dvh]">
           <h1 className="text-3xl font-black text-pink-950">Contacts</h1>
           <p className="text-lg lg:text-xl text-center text-pink-400">
             Get in touch

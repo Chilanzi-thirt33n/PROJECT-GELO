@@ -1,9 +1,9 @@
 ---
 title: "Premium Baking Powder"
 price: 50
-category: "Baking Supplies"
+category: "ingredients"
 stock: 100
-date_added: "2025-06-25"
+date: "2025-06-25"
 images:
   - "https://example.com/images/baking-powder-1.jpg"
   - "https://example.com/images/baking-powder-2.jpg"

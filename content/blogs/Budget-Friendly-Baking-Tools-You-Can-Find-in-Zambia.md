@@ -1,6 +1,7 @@
 ---
 
 title: "Budget-Friendly Baking Tools You Can Find in Zambia"
+intro: "Discover affordable baking tools available in Zambia."
 date: "2025-07-08"
 author: "Chilanzi Sensenta"
 images:

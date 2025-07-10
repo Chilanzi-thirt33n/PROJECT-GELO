@@ -1,5 +1,6 @@
 ---
 title: "How to Use a Cake Turntable Like a Pro"
+intro: "Master the art of cake decorating with a turntable."
 date: "2025-07-08"
 author: "Chilanzi Sensenta"
 images:

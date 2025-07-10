@@ -1,5 +1,6 @@
 ---
 title: "How to Bake a Cake from Scratch"
+intro: "Learn how to bake a cake from scratch with this step-by-step guide."
 date: "2025-07-07"
 author: "Chilanzi Sensenta"
 images:

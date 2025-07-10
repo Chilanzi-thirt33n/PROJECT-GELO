@@ -3,17 +3,15 @@ import Footer from "@/components/common/footer";
 import NavLinks from "@/components/common/nav-bar";
 import { Toaster } from "@/components/ui/sonner";
 import { ScrollMeter } from "@/components/common/scroll";
-import { Geist, Geist_Mono } from "next/font/google";
+import Services from "@/components/common/service";
 import "./globals.css";
+import { Poppins } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "600", "700"], // choose weights you need
+  variable: "--font-poppins", // custom CSS variable name
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -91,11 +89,12 @@ export default function RootLayout({
       <NavLinks links={linksData} logoSrc="/logo.svg" />
       <ScrollMeter />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-muted overflow-x-hidden`}
+        className={`${poppins.variable} antialiased bg-muted overflow-x-hidden`}
       >
         {children}
         <Toaster />
       </body>
+      <Services />
       <Footer />
     </html>
   );

@@ -21,8 +21,8 @@ const contactDetails = [
   {
     icon: FaEnvelope,
     label: "Email",
-    value: "gelostreats@gmail.com",
-    link: "mailto:gelostreats@gmail.com",
+    value: "Janetchilekwa@gmail.com",
+    link: "mailto:Janetchilekwa@gmail.com",
   },
   {
     icon: FaMapMarkerAlt,

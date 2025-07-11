@@ -35,7 +35,7 @@ export default function Services() {
         </h2>
         <hr className="border-pink-800 mb-6" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 text-pink-100 text-sm">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-pink-100 text-sm">
           {services.map((service, index) => (
             <motion.div
               key={index}

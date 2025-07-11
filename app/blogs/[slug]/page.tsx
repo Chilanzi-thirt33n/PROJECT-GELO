@@ -17,12 +17,12 @@ export default async function BlogPage({
   return (
     <div className="w-full flex flex-col items-center">
       {/* Header Section */}
-      <section className="w-full mt-20 max-h-max flex justify-center items-center bg-pink-100 p-2 lg:p-4">
+      <section className="w-full  max-h-max flex justify-center items-center bg-pink-100 p-2 lg:p-4">
         <motion.header
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
-          className="w-full max-h-max lg:w-[70vw] grid grid-cols-1 lg:grid-cols-2 gap-6 py-8 justify-center my-auto"
+          className="w-full max-h-max lg:w-[70vw] mt-24 mb-10 grid grid-cols-1 lg:grid-cols-2 gap-6 py-8 justify-center"
         >
           {/* Text Content */}
           <div className="flex flex-col justify-center">

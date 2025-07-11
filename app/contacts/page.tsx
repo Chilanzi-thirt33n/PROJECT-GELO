@@ -13,6 +13,12 @@ const contactDetails = [
     link: "tel:+260977543774",
   },
   {
+    icon: FaPhoneAlt,
+    label: "Phone",
+    value: "+(260) 973-015-900 ",
+    link: "tel:+260973015900",
+  },
+  {
     icon: FaEnvelope,
     label: "Email",
     value: "gelostreats@gmail.com",
@@ -43,7 +49,7 @@ const itemVariants = {
 export default function ContactPage() {
   return (
     <motion.div
-      className="w-full"
+      className="w-full h-full flex flex-col justify-center items-center"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -53,8 +59,8 @@ export default function ContactPage() {
         className="text-center w-full bg-white bg-[url('/bg.svg')] bg-cover bg-center"
         variants={itemVariants}
       >
-        <section className="flex mt-20 flex-col text-white justify-center items-center h-[30dvh] lg:h-[25dvh]">
-          <h1 className="text-3xl font-black text-pink-950">Contacts</h1>
+        <section className="flex my-10 flex-col text-white justify-center items-center h-[30dvh] lg:h-[25dvh]">
+          <h1 className="text-3xl  font-black text-pink-950">Contacts</h1>
           <p className="text-lg lg:text-xl text-center text-pink-400">
             Get in touch
           </p>

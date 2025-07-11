@@ -32,7 +32,7 @@ export default function TermsPage() {
         className="text-center w-full bg-white bg-[url('/bg.svg')] bg-cover bg-center"
         variants={itemVariants}
       >
-        <section className="flex mt-20 flex-col text-white justify-center items-center h-[30dvh] lg:h-[25dvh]">
+        <section className="flex my-10 flex-col text-white justify-center items-center h-[30dvh] lg:h-[25dvh]">
           <h1 className="text-3xl font-black text-pink-950">Terms of Use</h1>
           <p className="text-lg lg:text-xl text-center text-pink-400">
             Please read these terms carefully before using our website
@@ -41,7 +41,10 @@ export default function TermsPage() {
       </motion.header>
 
       {/* Terms of Use Content */}
-      <motion.div className="mx-auto p-6 max-w-3/4" variants={itemVariants}>
+      <motion.div
+        className="mx-auto p-6 w-full lg:max-w-3/4"
+        variants={itemVariants}
+      >
         <section className="p-6 lg:p-8">
           <div className="mb-8 border-b pb-4">
             <p className="text-gray-600 mt-2">Last Updated: 09/07/2025</p>

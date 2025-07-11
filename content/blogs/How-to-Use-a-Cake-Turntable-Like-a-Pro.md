@@ -4,7 +4,7 @@ intro: "Master the art of cake decorating with a turntable."
 date: "2025-07-08"
 author: "Chilanzi Sensenta"
 images:
-  - "/images/blogs/cake-turntable.png"
+  - "/images/blogs/turn_tables.webp"
 tags:
   - baking
   - cake

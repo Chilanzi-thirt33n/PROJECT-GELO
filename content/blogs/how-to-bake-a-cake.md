@@ -16,7 +16,7 @@ tags:
 ---
 
 ## 📸 Preview
-![Bundt Cake](https://images.pexels.com/photos/9194505/pexels-photo-9194505.jpeg)
+![Bundt Cake](/images/blogs/cakes.png)
 
 ---
 
@@ -79,7 +79,7 @@ Let the cake cool in the pan for **10 minutes**, then transfer to a wire rack to
 ---
 
 ## 📸 Final Result
-![Baking Process](https://images.pexels.com/photos/407073/pexels-photo-9194506.jpeg)
+![Baking Process](/images/blogs/cakes.png)
 
 ---
 

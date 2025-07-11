@@ -8,11 +8,11 @@ import { Facebook, Instagram } from "lucide-react";
 const details = {
   title: "About Us",
   sub_title: "Where Baking Begins – And Tastes Amazing",
-  image: "/hero.jpg",
+  image: "/About.jpg",
   description:
     "GelosTreat is your one-stop shop for all things baking in Zambia. From delicious custom cakes and pastries to quality baking tools and supplies, we help you create sweet moments at home or for your business. Whether you're celebrating a birthday, hosting an event, or starting your baking journey, we’ve got the ingredients, tools, and treats to make it unforgettable. Proudly based in Lusaka, we serve bakers and dessert lovers across Zambia.",
-  facebook: "https://www.facebook.com/yourcompany",
-  instagram: "https://www.instagram.com/yourcompany",
+  facebook: "https://www.facebook.com/GelosTreats",
+  instagram: "https://www.instagram.com/gelos_treats",
 };
 
 export function About() {

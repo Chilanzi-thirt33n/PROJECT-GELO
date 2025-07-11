@@ -88,7 +88,7 @@ export const HeroSection = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.6 }}
-            className="text-base sm:text-lg md:text-xl text-pink-50 font-bold max-w-2xl"
+            className="text-base sm:text-lg md:text-xl text-pink-50 max-w-2xl"
           >
             Shop at Gelo’s Treats for top-quality baking tools, ingredients, and
             fresh delights. Whether you are in Lusaka or anywhere in Zambia — we
@@ -117,7 +117,7 @@ export const HeroSection = () => {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.6 }}
-            className="hidden lg:flex flex-row flex-wrap gap-4 mt-6 text-pink-50"
+            className="flex flex-row flex-wrap gap-4 mt-6 text-pink-50"
           >
             {locations.map((location, index) => (
               <a

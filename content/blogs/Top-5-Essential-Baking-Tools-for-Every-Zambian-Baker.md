@@ -4,7 +4,7 @@ intro: "Discover the top 5 essential baking tools every Zambian baker should own
 date: "2025-07-08"
 author: "Chilanzi Sensenta"
 images:
-  - "/images/blogs/baking-tools.png"
+  - "/images/blogs/Essential_baking.jpg"
 tags:
   - baking
   - tools

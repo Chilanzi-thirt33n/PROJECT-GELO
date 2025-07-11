@@ -7,27 +7,27 @@ import Image from "next/image";
 const categories = [
   {
     title: "Ingredients",
-    image: "/images/categories/ingredients.jpg",
+    image: "/images/products/ingredients/cover.webp",
     description: "Flours, powders, sugars & more.",
-    href: "/products/ingredients",
+    href: "/products",
   },
   {
     title: "Appliances",
-    image: "/images/categories/appliances.jpg",
+    image: "/images/products/appliance/cover.webp",
     description: "Mixers, ovens, trays, and tools.",
-    href: "/products/appliances",
+    href: "/products",
   },
   {
     title: "Packaging",
-    image: "/images/categories/packaging.jpg",
+    image: "/images/products/packaging/cover.webp",
     description: "Boxes, wraps, and containers.",
-    href: "/products/packaging",
+    href: "/products",
   },
   {
     title: "Ready-Made Treats",
-    image: "/images/categories/treats.jpg",
+    image: "/images/products/baked/cover.webp",
     description: "Cupcakes, cakes & sweet orders.",
-    href: "/products/treats",
+    href: "/products",
   },
 ];
 
@@ -55,9 +55,9 @@ export const ProductCategories = () => {
           >
             <Link
               href={cat.href}
-              className="group flex items-center gap-5 bg-white hover:bg-pink-50 rounded-xl px-6 py-5 transition-all shadow-sm hover:shadow-md w-full sm:w-auto"
+              className="group flex items-center gap-5 bg-white hover:bg-pink-50 rounded-xl transition-all shadow-sm hover:shadow-md w-full sm:w-auto h-24" // fixed height here
             >
-              <div className="relative w-12 h-12 rounded-full overflow-hidden bg-white border border-pink-200">
+              <div className="relative w-28 h-full rounded-bl-lg rounded-tl-lg overflow-hidden bg-pink-200 border border-pink-200">
                 <Image
                   src={cat.image}
                   alt={cat.title}
@@ -65,7 +65,7 @@ export const ProductCategories = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="flex flex-col text-left">
+              <div className="flex flex-col text-left px-6 py-4 h-full justify-center">
                 <span className="text-pink-800 font-semibold text-base">
                   {cat.title}
                 </span>

@@ -5,7 +5,7 @@ intro: "Discover affordable baking tools available in Zambia."
 date: "2025-07-08"
 author: "Chilanzi Sensenta"
 images:
-  - "/images/blogs/budget-tools.png"
+  - "/images/blogs/baking_tools.jpg"
 tags:
   - affordable
   - baking

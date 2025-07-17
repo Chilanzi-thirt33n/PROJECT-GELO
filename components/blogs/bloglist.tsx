@@ -51,7 +51,7 @@ export default function BlogList({ blogs }: { blogs: Blog[] }) {
       {/* Sort Toggle Buttons */}
       <div className="mb-6 flex justify-center gap-4">
         <button
-          className={`px-4 py-2 rounded font-semibold transition ${
+          className={`px-4 py-1.5 rounded-full text-sm transition ${
             sortNewest
               ? "bg-pink-600 text-white shadow-lg"
               : "bg-gray-100 text-gray-800 hover:bg-gray-200"
@@ -66,7 +66,7 @@ export default function BlogList({ blogs }: { blogs: Blog[] }) {
         </button>
 
         <button
-          className={`px-4 py-2 rounded font-semibold transition ${
+          className={`px-4 py-1.5 rounded-full text-sm transition ${
             !sortNewest
               ? "bg-pink-600 text-white shadow-lg"
               : "bg-gray-100 text-gray-800 hover:bg-gray-200"

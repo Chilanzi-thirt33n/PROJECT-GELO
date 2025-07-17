@@ -7,16 +7,12 @@ import { MapPin } from "lucide-react";
 
 const locations = [
   {
-    name: "Lusaka",
-    url: "https://www.google.com/maps/place/Lusaka,+Zambia",
-  },
-  {
-    name: "Ndola",
-    url: "https://www.google.com/maps/place/Ndola,+Zambia",
+    name: "Lusaka ",
+    url: "https://maps.app.goo.gl/Xnfe3cc5o4X8m1eSA",
   },
   {
     name: "Kitwe",
-    url: "https://www.google.com/maps/place/Kitwe,+Zambia",
+    url: "https://maps.app.goo.gl/iHW4djrhB7g9xkVcA",
   },
 ];
 

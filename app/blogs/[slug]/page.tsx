@@ -17,7 +17,7 @@ export default async function BlogPage({
   return (
     <div className="w-full flex flex-col items-center">
       {/* Header Section */}
-      <section className="w-full  max-h-max flex justify-center items-center bg-pink-100 p-2 lg:p-4">
+      <div className="w-full  max-h-max flex justify-center items-center bg-pink-100 p-2 lg:p-4">
         <motion.header
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default async function BlogPage({
             </div>
           )}
         </motion.header>
-      </section>
+      </div>
 
       {/* Blog Content */}
       <motion.article

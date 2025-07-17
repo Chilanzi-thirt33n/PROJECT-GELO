@@ -3,6 +3,7 @@ import { ProductCategories } from "@/components/home/category";
 import { About } from "@/components/home/about";
 import WhyChooseUs from "@/components/home/why";
 import LatestPosts from "@/components/home/blogs";
+import Reviews from "@/components/home/reviews";
 
 export default function Home() {
   return (
@@ -22,6 +23,13 @@ export default function Home() {
           className="w-full justify-center items-stretch my-5"
         >
           <About />
+        </section>
+
+        <section
+          id="Reviews"
+          className="w-full justify-center items-stretch my-5"
+        >
+          <Reviews />
         </section>
 
         <section className="w-full justify-center items-stretch">

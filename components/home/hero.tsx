@@ -100,7 +100,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.6 }}
           >
             <Link href="/products">
-              <Button className="mt-4 text-white bg-pink-600 hover:bg-pink-700">
+              <Button className="mt-4 text-white bg-pink-950 hover:bg-pink-600">
                 View Our Catalogue
               </Button>
             </Link>

@@ -39,7 +39,7 @@ const reviews: Review[] = [
     id: 5,
     name: "Princess Safila Janet.",
     text: "they've everything under one roof , fair prices and good customer service",
-    tags: ["Recommends", "31th oct 2025"],
+    tags: ["Recommends", "31th oct 2024"],
   },
   {
     id: 6,

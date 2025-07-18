@@ -3,7 +3,14 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Lobster } from "next/font/google";
 
+const lobster = Lobster({ subsets: ["latin"], weight: "400" });
+const details = {
+  title: "Our Products",
+  description:
+    "Essential tools and ingredients to help Zambian bakers create confidently — at home or for business.",
+};
 const categories = [
   {
     title: "Ingredients",
@@ -33,7 +40,18 @@ const categories = [
 
 export const ProductCategories = () => {
   return (
-    <section className="py-12 px-4 sm:px-8 lg:px-16">
+    <section className="w-full py-12 flex flex-col space-y-8 justify-center items-center px-4 sm:px-8 lg:px-16">
+      <div>
+        {" "}
+        <motion.h1
+          className={`text-pink-900 text-center text-4xl font-extrabold ${lobster.className}`}
+        >
+          {details.title}
+        </motion.h1>
+        <motion.p className="text-pink-700 text-lg text-center max-w-3xl">
+          {details.description}
+        </motion.p>
+      </div>
       <motion.div
         initial="hidden"
         animate="visible"
